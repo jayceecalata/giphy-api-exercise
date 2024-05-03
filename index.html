@@ -6,16 +6,8 @@
     <title>API-Practice</title>
 </head>
 <body>
+    <input type="search" id="js-search" autofocus>
     <img src="#" />
-    <script>
-        const img = document.querySelector('img');
-        fetch('https://api.giphy.com/v1/gifs/translate?api_key=Y2AHOQRuoZGY2cWPNRDIPwIPq75uWmSc&s=pepe+frog', {mode: 'cors'})
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (response) {
-            img.src = response.data.images.original.url;
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
