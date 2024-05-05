@@ -11,12 +11,8 @@ searchBar.onsearch = () => {
 
 const endPoint = 'https://api.giphy.com/v1/gifs/translate';
 const apiKey = 'Y2AHOQRuoZGY2cWPNRDIPwIPq75uWmSc';
-function searchGif(userInput) {
-    return fetch(`${endPoint}?api_key=${apiKey}&s=${userInput}`, {mode: 'cors'})
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (response) {
-        img.src = response.data.images.original.url;
-    })
+async function searchGif(userInput) {
+    const gif = await fetch(`${endPoint}?api_key=${apiKey}&s=${userInput}`, {mode: 'cors'});
+    const json = await gif.json();
+    img.src = json.data.images.original.url;
 }
