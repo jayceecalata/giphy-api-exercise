@@ -1,0 +1,34 @@
+*,
+::before,
+::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input {
+    display: block;
+    margin: 1rem;
+    padding: 8px;
+    font: inherit;
+}
+
+input,
+.image-container {
+    width: 50ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 720px;
+    gap: 32px;
+}
